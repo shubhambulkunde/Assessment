@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TWA</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link href="/dist/output.css" rel="stylesheet">
+    <link rel="shortcut icon" href="https://lh3.googleusercontent.com/xrtJecq5dAAmpEGPP9vgzCAazKS8p_jhJ5JVxodoQOAjQks5JJ0JLsMo4haUBGuMRrMoXRgxMH69r3oH6PYuJ-sRzQSSfvgQ5IpY6UgdrL5SWzUapXkssQF3cgKBlNpnI0uBgmqrXw=w2400" type="image">
+</head>
+
+<body>
+    <!-- nav bar -->
+    <nav>
+        <div>
+            <nav>
+                <img class=" mx-4 " width="300" height="180" src="https://lh3.googleusercontent.com/eDl4VdOtMcCOa6Gsc62IfqWYk7r-Zluz6tr5U9LejZoofXtlsrZGk_DY9kl0uPOIRL8RZjzh3kWvMOw0mSfL61aykMo8w5SbTa0yMpiqFdNlgSQjJgy4uX7tduGQQnL9j3hJy5EBRw=w2400" />
+
+        </div>
+
+        </nav>
+        <hr>
+        <section class="vh-100 " style="background-image:url(https://source.unsplash.com/1400x800/?neon)">
+            <div class="container py-5 h-100">
+                <div class="row d-flex justify-content-center align-items-center h-100">
+                    <div class="col col-xl-10">
+                        <div class="card" style="border-radius: 1rem;">
+                            <div class="row g-0">
+                                <div class="col-md-5 col-lg-4 d-none d-md-block">
+                                    <img src="https://lh3.googleusercontent.com/v4kWyoz9zYu_Y6umGuX0r6WgLILBhl_KncNleXgmG8sNbOQh6rTXMKHHmsNelhccYbWbNdDhbNepQAL6s78OdAVBV3V1kyccorQWEzCGtly0t4eIxBewy4vYnUJXqWoILSswn3pM3A=w2400" alt="..." class="img-fluid" style=" height: 600px ; border-radius: 1rem 0 0 1rem;"
+                                    />
+                                </div>
+                                <div class="col-md-4 col-sm-4 d-flex align-items-center">
+                                    <div class="card-body p-4 p-lg-5 text-black">
+
+
+                                        <h5 class=" mb-3 pb-3 font-semibold text-xl" style="letter-spacing: 1px;">Enter your marks
+                                        </h5>
+
+
+                                        <div class="form-outline mb-4">
+                                            <input type="number" id="attend" class="form-control form-control-lg" placeholder="%" />
+                                            <label class="form-label" for="attend">Attendance</label>
+                                        </div>
+
+                                        <div class="form-outline mb-4">
+                                            <input type="number" id="test1" class="form-control form-control-lg" />
+                                            <label class="form-label" for="test1">Mock practical</label>
+                                        </div>
+
+                                        <div class="form-outline mb-4">
+
+                                            <label class="form-label" for="result">
+                                            <h5 class=" font-semibold text-lg" style="letter-spacing: 1px;">Term work =
+                                            </h5>
+                                        </label>
+                                            <input type="text" id="result" class="form-control form-control-lg" />
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-sm-4 d-flex align-items-center">
+                                    <div class="card-body p-4 p-lg-5 text-black">
+
+                                        <div class="form-outline mb-4">
+                                            <input type="number" id="test2" class="form-control form-control-lg" />
+                                            <label class="form-label" for="test2">Mock tests</label>
+                                        </div>
+
+                                        <div class="form-outline mb-4">
+                                            <input type="number" id="special" class="form-control form-control-lg" />
+                                            <label class="form-label" for="special">Extra</label>
+                                        </div>
+                                        <div class="form-outline mb-3">
+                                            <a type="button" href="#" id="final" class="justify-center px-3 py-2 lg:px-4 lg:py-3 bg-gray-900 text-gray-200 text-xs font-semibold rounded hover:bg-gray-800 btn btn-success hover:text-white text-lg " onclick="calc();">Get
+                                            Termwork
+                                        </a>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </section>
+        <script>
+            function calc() {
+                var attend = parseFloat(document.getElementById("attend").value);
+                var test1 = parseFloat(document.getElementById("test1").value);
+                var test2 = parseFloat(document.getElementById("test2").value);
+                var special = parseFloat(document.getElementById("special").value);
+                document.getElementById("result").value = (attend + test1 + test2 + special) / 4;
+            }
+        </script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+</body>
+
+</html>
